@@ -6,13 +6,7 @@ $(function () {
     // }, 2000);
 
 
-    var options = {
-        strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-        typeSpeed: 60,
 
-    }
-
-    var typed = new Typed(".typer", options);
 
     TweenMax.to('.logo-stroke', 0, {
         drawSVG: "0% 0%"
@@ -28,28 +22,58 @@ $(function () {
             drawSVG: "0% 100%",
             ease: myEase
         })
-        .to('.logo-p', 0.3, {
+        .to('.logo-p', 0.2, {
             drawSVG: "0% 100%",
             ease: myEase
-        }, '-=0.5')
-        .to('.logo-h', 0.3, {
+        }, '-=0.6')
+        .to('.logo-h', 0.2, {
             drawSVG: "0% 100%",
             ease: myEase
-        })
+        }, '-=0.4')
         .to('.logo-base', 1, {
             drawSVG: "0% 100%",
             ease: myEase
-        })
+        }, '-=0.2');
 
     function ending() {
         $('body').css('background-color', '#022648');
         $('.logo-stroke').css('stroke', '#F5907C');
 
-        TweenMax.to('.center_logo', 1, {
-           scale: 0.6,
-           y: -300,
-           ease: Power4.easeOut
+        let tl2 = new TimelineMax({
+
         });
+
+        tl2.to('.center_logo', 0.6, {
+                css: {
+                    width: '10vh'
+                },
+                ease: Power4.easeOut
+            })
+            .to('.center_lower', 0.6, {
+                css: {
+                    height: '60vh'
+                },
+                ease: Power4.easeOut
+            }, 0)
+            .staggerFrom('.menu-link', 0.8, {y:-100, opacity:0, ease: Power4.easeOut}, 0.3)
+            .staggerFrom('.center_lower_item', 0.8, {
+                y: 100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, 0.3, '-=0.2');
+
+        var options = {
+            strings: ["Hi, I'm Matthew.", "I'm a web designer and developer.", "Click \"projects\" below to see my recent work", "or click \"about me\" to learn more about me.", "click the button in the top right message me"],
+            startDelay: 1000,
+            backDelay: 1000,
+            backSpeed: 20,
+            typeSpeed: 40,
+            loop: true,
+            loopCount: Infinity,
+            cursorChar: '|',
+        }
+
+        var typed = new Typed(".typer", options);
     }
 
 
