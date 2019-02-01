@@ -45,9 +45,9 @@ $(function () {
         $('body').css('background-color', '#022648');
         $('.logo-stroke').css('stroke', '#F5907C');
 
-        TweenMax.to('.logo', 1, {
+        TweenMax.to('.center_logo', 1, {
            scale: 0.6,
-           y: -30,
+           y: -300,
            ease: Power4.easeOut
         });
     }
