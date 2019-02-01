@@ -1,14 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,900");
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-color: #022648;
+  background-color: #F5907C;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   color: #FBD2B4;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logo-stroke {
+  fill: none;
+  stroke: #022648;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  -webkit-transition: stroke 400ms ease;
+  transition: stroke 400ms ease;
+}
+
+.logo-m {
+  fill: none;
+  stroke: #022648;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  -webkit-transition: stroke 400ms ease;
+  transition: stroke 400ms ease;
 }
 
 .background-diagonal {
@@ -19,16 +46,20 @@ body {
   background-color: #F5907C;
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  -webkit-animation: slideIntoPosition 0.5s cubic-bezier(0.3, 0.3, 0, 1);
-          animation: slideIntoPosition 0.5s cubic-bezier(0.3, 0.3, 0, 1);
+  -webkit-animation: slideIntoPosition 1s cubic-bezier(0, 1, 0, 1);
+          animation: slideIntoPosition 1s cubic-bezier(0, 1, 0, 1);
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 .center {
   position: absolute;
+  min-width: 400px;
   top: 50%;
   left: 50%;
+  text-align: center;
   -webkit-transform: translateX(-60%) translateY(-100%);
           transform: translateX(-60%) translateY(-100%);
 }
@@ -36,27 +67,5 @@ body {
 .under-construction {
   font-size: 50px;
   color: #fff;
-}
-
-@-webkit-keyframes slideIntoPosition {
-  0% {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  }
-  100% {
-    -webkit-clip-path: polygon(90% 0, 100% 0%, 100% 100%, 60% 100%);
-            clip-path: polygon(90% 0, 100% 0%, 100% 100%, 60% 100%);
-  }
-}
-
-@keyframes slideIntoPosition {
-  0% {
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-  }
-  100% {
-    -webkit-clip-path: polygon(90% 0, 100% 0%, 100% 100%, 60% 100%);
-            clip-path: polygon(90% 0, 100% 0%, 100% 100%, 60% 100%);
-  }
 }
 /*# sourceMappingURL=style.css.map */
