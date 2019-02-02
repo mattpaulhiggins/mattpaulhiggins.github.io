@@ -34,9 +34,12 @@ body {
     transition: stroke 400ms ease;
 }
 
+.center_typed {
+    height: 30px;
+}
+
 .typer {
     color: #C2E2F9;
-    height: 20px;
 }
 
 .logo-m {
@@ -127,4 +130,71 @@ h2 {
 .under-construction {
     font-size: 50px;
     color: #fff;
+}
+
+.expander {
+    z-index:20;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    &:hover>.expander-front {
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
+
+.expander__expanded {
+    &>.expander-front {
+        background-color: $blue;
+    }
+
+    &>.expander-back {
+        transform: scale(80);
+    }
+
+    &>.expander-front>span {
+        transform: rotate(135deg);
+        color: $peach;
+    }
+}
+
+.expander-front {
+    z-index:20;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $peach;
+    transition: all 200ms ease-out;
+}
+
+.expander-front__expanded {
+    background-color: $peach;
+}
+
+.expander-back {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: $peach;
+    transition: transform 500ms ease-out;
+    z-index: 10;
+}
+
+.plus {
+    font-size: 40px;
+    font-weight: 800;
+    position: absolute;
+    color: $blue;
+    left: 30%;
+    top: 10%;
+    transition: transform 400ms ease;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }

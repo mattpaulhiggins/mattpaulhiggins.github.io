@@ -55,15 +55,19 @@ $(function () {
                 },
                 ease: Power4.easeOut
             }, 0)
-            .staggerFrom('.menu-link', 0.8, {y:-100, opacity:0, ease: Power4.easeOut}, 0.3)
+            .staggerFrom('.menu-link', 0.8, {
+                y: -100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, 0.3)
             .staggerFrom('.center_lower_item', 0.8, {
                 y: 100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 0.3, '-=0.2');
+            }, 0.3, '-=1');
 
         var options = {
-            strings: ["Hi, I'm Matthew.", "I'm a web designer and developer.", "Click \"projects\" below to see my recent work", "or click \"about me\" to learn more about me.", "click the button in the top right message me"],
+            strings: ["Hi, I'm Matthew.", "I'm a web designer and developer.", "Learn more about me by clicking below.", "Message me using the button above."],
             startDelay: 1000,
             backDelay: 1000,
             backSpeed: 20,
@@ -74,16 +78,18 @@ $(function () {
         }
 
         var typed = new Typed(".typer", options);
+
+
+        let expanded = false;
+        const expander = document.querySelector('.expander');
+
+        expander.addEventListener('click', function () {
+            if (!expanded) {
+                expander.classList.add("expander__expanded");
+            } else {
+                expander.classList.remove("expander__expanded");
+            }
+            expanded = !expanded;
+        });
     }
-
-
-
-
-
-    // tl.from('.logo_m', 1, {drawSVG: "0% 0%", ease:Power4.easeOut});
-    // tl.add(TweenMax.staggerTo('.logo-stroke', 2, {
-    //     drawSVG: "0 100%",
-    //     ease: Expo.easeOut
-    // }, 1))
-
 });

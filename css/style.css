@@ -29,9 +29,12 @@ body {
   transition: stroke 400ms ease;
 }
 
+.center_typed {
+  height: 30px;
+}
+
 .typer {
   color: #C2E2F9;
-  height: 20px;
 }
 
 .logo-m {
@@ -131,5 +134,79 @@ h2 {
 .under-construction {
   font-size: 50px;
   color: #fff;
+}
+
+.expander {
+  z-index: 20;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.expander:hover > .expander-front {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  cursor: pointer;
+}
+
+.expander__expanded > .expander-front {
+  background-color: #022648;
+}
+
+.expander__expanded > .expander-back {
+  -webkit-transform: scale(80);
+          transform: scale(80);
+}
+
+.expander__expanded > .expander-front > span {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  color: #F5907C;
+}
+
+.expander-front {
+  z-index: 20;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #F5907C;
+  -webkit-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+
+.expander-front__expanded {
+  background-color: #F5907C;
+}
+
+.expander-back {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background-color: #F5907C;
+  -webkit-transition: -webkit-transform 500ms ease-out;
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  z-index: 10;
+}
+
+.plus {
+  font-size: 40px;
+  font-weight: 800;
+  position: absolute;
+  color: #022648;
+  left: 30%;
+  top: 10%;
+  -webkit-transition: -webkit-transform 400ms ease;
+  transition: -webkit-transform 400ms ease;
+  transition: transform 400ms ease;
+  transition: transform 400ms ease, -webkit-transform 400ms ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 /*# sourceMappingURL=style.css.map */
