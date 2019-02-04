@@ -6,15 +6,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Test</title>
+
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+            crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
     <body>
+        <div class="contact-form">
+            <div class="lds-facebook"><div></div><div></div><div></div></div>
+            <div class="thank-you">Message Sent, Thank you!</div>
+            <form id="contact-me" target="_self" action="">
+                <div class="form-group form-element">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control
+                        text-input"
+                        id="name" required>
+                </div>
+
+                <div class="form-group form-element">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="_replyTo" class="form-control
+                        text-input"
+                        id="email"
+                        aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group form-element">
+                    <label for="msg" class="form-label">Message</label>
+                    <textarea class="form-control text-input"
+                        id="msg"></textarea>
+                </div>
+
+                <input type="submit" value="Send" class="btn-send">
+
+
+            </form>
+
+        </div>
         <div class="expander">
             <div class="expander-front"><span class="plus">+</span></div>
-            <div class="expander-back"></div>
         </div>
+        <div class="expander-back"></div>
         <div class="center">
             <div class="center_logo">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -39,27 +74,75 @@
                             d="M94.5,207.4l-30,56.6c0,0,10.1,19.9,30,19.9s30-19.9,30-19.9L94.5,207.4z"></path>
                     </g>
                 </svg>
-
             </div>
-            <div class="center_lower">
-                <div class="center_lower_item center_typed">
+            <div class="container center_lower">
+                <div class="row justify-content-center">
                     <span class="typer"></span>
                 </div>
-                <div class="menu">
-                    <a href="#" class="menu-link">About</a><a href="#"
-                        class="menu-link">work</a>
+                <div class="row justify-content-center">
+                    <div class="menu">
+                        <a href="#" class="menu-link about link_active">About</a>
+                        <a href="#" class="menu-link work">work</a>
+                    </div>
                 </div>
-                <div class="center_lower_item center_down">
-                    <h2>Boutique J'Adore</h2>
-                    <p>Design, Development</p>
-                </div>
-                <div class="center_lower_item center_down">
-                    <p>. . .</p>
+
+                <div class="row justify-content-center">
+                    <div class="container about-content">
+                        <p>Proin at finibus augue, quis maximus dolor. Sed in
+                            ultricies lectus. Etiam euismod consectetur urna non
+                            euismod. Nulla facilisi. Phasellus at viverra lorem,
+                            dictum commodo nulla. Etiam eu sagittis felis.
+                            Maecenas finibus tortor ut convallis eleifend.
+                            Aliquam pretium tincidunt dui, ac porta eros
+                            placerat ac.</p>
+                            <p>Proin at finibus augue, quis maximus dolor. Sed in
+                                    ultricies lectus. Etiam euismod consectetur urna non
+                                    euismod. Nulla facilisi. Phasellus at viverra lorem,
+                                    dictum commodo nulla. Etiam eu sagittis felis.
+                                    Maecenas finibus tortor ut convallis eleifend.
+                                    Aliquam pretium tincidunt dui, ac porta eros
+                                    placerat ac.</p>
+                        <p>Proin at finibus augue, quis maximus dolor. Sed in
+                            ultricies lectus. Etiam euismod consectetur urna non
+                            euismod. Nulla facilisi. Phasellus at viverra lorem,
+                            dictum commodo nulla. Etiam eu sagittis felis.
+                            Maecenas finibus tortor ut convallis eleifend.
+                            Aliquam pretium tincidunt dui, ac porta eros
+                            placerat ac.</p>
+                    </div>
+                    <div class="container work-content">
+
+                        <div class="row work-row">
+                            <div class="col-12">
+                                <span class="project_title">Boutique Adore</span>
+                            </div>
+                        </div>
+                        <div class="row work-row">
+                            <div class="col-12">
+                                <p>Design, Development</p>
+                            </div>
+                        </div>
+
+                        <div class="row work-row">
+                            <div class="col-12">
+                                <p>. . .</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            crossorigin="anonymous"></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
