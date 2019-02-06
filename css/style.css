@@ -65,10 +65,8 @@ h2 {
 
 .center {
   position: relative;
-  top: 50vh;
+  top: 30vh;
   text-align: center;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .center_lower {
@@ -288,6 +286,17 @@ h2 {
 
 .about-content {
   opacity: 1;
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  stroke: none;
+  fill: #F5907C;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .work-content {

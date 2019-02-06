@@ -1,5 +1,7 @@
 $(function () {
 
+    $('[data-toggle="tooltip"]').tooltip();
+
     TweenMax.to('.logo-stroke', 0, {
         drawSVG: "0% 0%"
     });
@@ -35,9 +37,7 @@ $(function () {
         $('body').css('background-color', '#022648');
         $('.logo-stroke').css('stroke', '#F5907C');
 
-        let tl2 = new TimelineMax({
-
-        });
+        let tl2 = new TimelineMax({});
 
         tl2.to('.center_logo', 0.6, {
                 css: {
@@ -45,16 +45,30 @@ $(function () {
                 },
                 ease: Power4.easeOut
             })
+            .to('.center', 0.6, {
+                css: {
+                    top: '5vh'
+                },
+                ease: Power4.easeOut
+            }, '-=0.6')
+            .from('.typer-row', 0.6, {
+                y: 100,
+                opacity:0,
+                ease: Power4.easeOut
+            })
             .staggerFrom('.menu-link', 0.8, {
                 y: -100,
                 opacity: 0,
                 ease: Power4.easeOut
             }, 0.3)
-            .staggerFrom('.work-row', 0.8, {
+            .from('.about-text', 0.4, { y: 100,
+                opacity: 0,
+                ease: Power4.easeOut})
+            .staggerFrom('.icon', 0.8, {
                 y: 100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 0.3, '-=1')
+            }, 0.3)
             .to('.expander', 1, {
                 scale: 1,
                 ease: Elastic.easeOut
@@ -105,7 +119,7 @@ $(function () {
 
             $.ajax({
                 url: "https://docs.google.com/forms/d/147C2SVFRoSkk55Q5qozQfjJEYLizB7oYzdaauLLldSI/formResponse",
-           
+
                 data: {
                     'entry.1597425946': name,
                     'entry.24140995': email,
@@ -125,17 +139,25 @@ $(function () {
         }
 
         function showSuccess() {
-            TweenMax.set('.thank-you', {opacity:0});
+            TweenMax.set('.thank-you', {
+                opacity: 0
+            });
             thankYou.style.display = 'inline-block';
-            TweenMax.to('.lds-facebook', 0.3, {opacity:0});
-            TweenMax.to('.thank-you', 0.3, {opacity:1});
+            TweenMax.to('.lds-facebook', 0.3, {
+                opacity: 0
+            });
+            TweenMax.to('.thank-you', 0.3, {
+                opacity: 1
+            });
         }
 
         $('#contact-me').submit(function (e) {
             e.preventDefault();
             // TweenMax.to('#contact-me', 0.3, {opacity:0, onComplete:alert('hdf')});
             contactMe.style.display = 'none';
-            TweenMax.to('.lds-facebook', 0.3, {opacity:1});
+            TweenMax.to('.lds-facebook', 0.3, {
+                opacity: 1
+            });
             postToGoogle();
             return false;
         });
