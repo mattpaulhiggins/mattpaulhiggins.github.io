@@ -300,11 +300,15 @@ h2 {
   border: none;
   cursor: pointer;
   padding: 5px;
-  outline: 1px solid red;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .work-content {
-  display: none;
+  display: block;
 }
 
 .plus {

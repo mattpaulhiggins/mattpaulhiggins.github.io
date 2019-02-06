@@ -292,15 +292,14 @@ h2 {
     border: none;
     cursor: pointer;
     padding:5px;
-    outline: 1px solid red;
 
-    // &:hover {
-    //     transform:translateY(-5px);
-    // }
+    &:hover {
+        transform:scale(1.1);
+    }
 }
 
 .work-content {
-    display:none;
+    display:block;
 }
 
 .plus {
