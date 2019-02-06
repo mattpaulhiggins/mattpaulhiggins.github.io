@@ -61,13 +61,13 @@ $(function () {
 
         tl2.to('.center_logo', 0.4, {
                 css: {
-                    width: '7vh'
+                    width: '8vh'
                 },
                 ease: Power4.easeOut
             })
             .to('.center', 0.6, {
                 css: {
-                    top: '10vh'
+                    top: '8vh'
                 },
                 ease: Elastic.easeInOut.config(1, 0.75)
             }, "-=0.4")
