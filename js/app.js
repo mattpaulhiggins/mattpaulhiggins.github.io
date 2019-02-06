@@ -2,6 +2,25 @@ $(function () {
 
     $('[data-toggle="tooltip"]').tooltip();
 
+    //INIT
+    $('.work-content').hide();
+    TweenMax.set('.about-text', {
+        opacity: 0,
+        y: 50
+    });
+    TweenMax.set('.icon', {
+        opacity: 0,
+        y: 50
+    });
+    TweenMax.set('.menu-link', {
+        opacity: 0,
+        y: 50
+    });
+    TweenMax.set('.work-content', {
+        opacity: 0,
+        y: 50
+    });
+
     TweenMax.to('.logo-stroke', 0, {
         drawSVG: "0% 0%"
     });
@@ -11,6 +30,7 @@ $(function () {
     });
 
     let tl = new TimelineMax({
+        delay: 0.5,
         onComplete: ending
     });
 
@@ -39,7 +59,7 @@ $(function () {
 
         let tl2 = new TimelineMax({});
 
-        tl2.to('.center_logo', 0.6, {
+        tl2.to('.center_logo', 0.4, {
                 css: {
                     width: '7vh'
                 },
@@ -47,36 +67,39 @@ $(function () {
             })
             .to('.center', 0.6, {
                 css: {
-                    top: '5vh'
+                    top: '10vh'
                 },
-                ease: Power4.easeOut
-            }, '-=0.6')
+                ease: Elastic.easeInOut.config(1, 0.75)
+            }, "-=0.4")
             .from('.typer-row', 0.6, {
                 y: 100,
-                opacity:0,
+                opacity: 0,
                 ease: Power4.easeOut
             })
-            .staggerFrom('.menu-link', 0.8, {
-                y: -100,
-                opacity: 0,
+            .staggerTo('.menu-link', 0.6, {
+                opacity: 1,
+                y: 0,
                 ease: Power4.easeOut
-            }, 0.3)
-            .from('.about-text', 0.4, { y: 100,
-                opacity: 0,
-                ease: Power4.easeOut})
-            .staggerFrom('.icon', 0.8, {
+            }, 0.2)
+            .to('.about-text', 0.6, {
                 y: 100,
-                opacity: 0,
+                opacity: 1,
+                y: 0,
                 ease: Power4.easeOut
-            }, 0.3)
+            }, '-=0.4')
+            .staggerTo('.icon', 0.6, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, 0.2, '-=0.4')
             .to('.expander', 1, {
                 scale: 1,
                 ease: Elastic.easeOut
-            });
+            }, '-=0.4');
 
         var options = {
-            strings: ["Hi, I'm Matthew.", "I'm a web designer and developer.", "Learn more about me by clicking below.", "Message me using the button above."],
-            startDelay: 1000,
+            strings: ["Hi, I'm Matthew.", "I'm a web designer/developer.", "Learn more about me below,", "or message me using the <i>plus</i> button."],
+            startDelay: 2500,
             backDelay: 1000,
             backSpeed: 20,
             typeSpeed: 40,
@@ -89,12 +112,28 @@ $(function () {
 
         let activeLink = 'about';
 
-
         $('.about').click(function () {
             if (activeLink !== 'about') {
                 activeLink = 'about';
                 $('.about').addClass('link_active');
                 $('.work').removeClass('link_active');
+
+                TweenMax.to('.work-content', 0.4, {
+                    y: 50,
+                    opacity: 0,
+                    ease: Power4.easeOut,
+                    onComplete: showAbout
+                });
+
+                function showAbout() {
+                    $('.work-content').hide();
+                    $('.about-content').show();
+                    TweenMax.to('.about-content', 0.4, {
+                        y: 0,
+                        opacity: 1,
+                        ease: Power4.easeOut,
+                    });
+                }
             }
         });
 
@@ -103,8 +142,26 @@ $(function () {
                 activeLink = 'work';
                 $('.work').addClass('link_active');
                 $('.about').removeClass('link_active');
+
+                TweenMax.to('.about-content', 0.4, {
+                    y: 50,
+                    opacity: 0,
+                    ease: Power4.easeOut,
+                    onComplete: showWork
+                });
+
+                function showWork() {
+                    $('.about-content').hide();
+                    $('.work-content').show();
+                    TweenMax.to('.work-content', 0.4, {
+                        y: 0,
+                        opacity: 1,
+                        ease: Power4.easeOut,
+                    });
+                }
             }
         });
+
 
         let expanded = false;
         const expander = document.querySelector('.expander');
