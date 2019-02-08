@@ -17,6 +17,7 @@ body {
 .center_logo {
   width: 20vh;
   margin: 0 auto;
+  opacity: 0;
 }
 
 .logo-stroke {
@@ -64,6 +65,7 @@ h4 {
 .center_lower {
   position: relative;
   margin-top: -100;
+  display: none;
 }
 
 .center_lower_item {
@@ -79,6 +81,7 @@ h4 {
   padding: 0px;
   text-decoration: none;
   margin: 20px;
+  opacity: 0;
   -webkit-transition: color 0.4s cubic-bezier(0.56, 0.57, 0.03, 0.99);
   transition: color 0.4s cubic-bezier(0.56, 0.57, 0.03, 0.99);
 }
@@ -153,6 +156,8 @@ h4 {
   right: 80px;
   -webkit-transform-origin: 20px 20px;
           transform-origin: 20px 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
 }
 
 .expander:hover > .expander-front {
@@ -295,9 +300,14 @@ h4 {
   text-transform: uppercase;
 }
 
-.about-text, .work-item-text {
+.about-text,
+.work-item-text {
   max-width: 500px;
   margin: 0 auto;
+}
+
+.about-text {
+  opacity: 0;
 }
 
 .text-input {
@@ -407,7 +417,8 @@ h4 {
     top: 6px;
     height: 51px;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 19px;
     height: 26px;
   }
@@ -418,9 +429,34 @@ h4 {
     top: 6px;
     height: 51px;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 19px;
     height: 26px;
   }
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .row {
+    margin: 30px 0px;
+  }
+  .work-item-row {
+    margin: 10px 0px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  body {
+    font-size: 13px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
 /*# sourceMappingURL=style.css.map */
