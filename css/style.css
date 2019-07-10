@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,800");
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
 html,
 body {
   margin: 0;
@@ -7,7 +7,7 @@ body {
 
 body {
   background-color: #ffdac4;
-  font-family: "Poppins", sans-serif;
+  font-family: "Karla", sans-serif;
   overflow-x: hidden;
   color: #ffdac4;
   -webkit-transition: all 300ms ease;
