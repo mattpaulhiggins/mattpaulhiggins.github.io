@@ -1,34 +1,46 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
 
-$(function () {
+$(function() {
   $('[data-toggle="tooltip"]').tooltip(); //INIT
 
-  $('.work-content').hide();
-  TweenMax.set('.about-text', {
+  $(".work-content").hide();
+  TweenMax.set(".about-text", {
     opacity: 0,
     y: 50
   });
-  TweenMax.set('.icon', {
+  TweenMax.set(".icon", {
     opacity: 0,
     y: 50
   });
-  TweenMax.set('.menu-link', {
+  TweenMax.set(".menu-link", {
     opacity: 0,
     y: 50
   });
-  TweenMax.set('.work-content', {
+  TweenMax.set(".work-content", {
     opacity: 0,
     y: 50
   });
-  TweenMax.set('.logo-stroke', {
+  TweenMax.set(".logo-stroke", {
     drawSVG: "0% 0%"
   });
-  TweenMax.set('.expander', {
+  TweenMax.set(".expander", {
     scale: 0
   });
-  TweenMax.set('.center_logo', {
+  TweenMax.set(".center_logo", {
     opacity: 1
   });
   var tl = new TimelineMax({
@@ -36,85 +48,146 @@ $(function () {
     onComplete: ending
   });
   var myEase = Power4.easeOut;
-  tl.to('.logo-m', 1.5, {
+  tl.to(".logo-m", 1.5, {
     drawSVG: "0% 100%",
     ease: myEase
-  }).to('.logo-p', 0.2, {
-    drawSVG: "0% 100%",
-    ease: myEase
-  }, '-=0.6').to('.logo-h', 0.2, {
-    drawSVG: "0% 100%",
-    ease: myEase
-  }, '-=0.4').to('.logo-base', 1, {
-    drawSVG: "0% 100%",
-    ease: myEase
-  }, '-=0.2');
+  })
+    .to(
+      ".logo-p",
+      0.2,
+      {
+        drawSVG: "0% 100%",
+        ease: myEase
+      },
+      "-=0.6"
+    )
+    .to(
+      ".logo-h",
+      0.2,
+      {
+        drawSVG: "0% 100%",
+        ease: myEase
+      },
+      "-=0.4"
+    )
+    .to(
+      ".logo-base",
+      1,
+      {
+        drawSVG: "0% 100%",
+        ease: myEase
+      },
+      "-=0.2"
+    );
 
   function ending() {
     var _tl2$to$to$add$from$s;
 
-    $('body').css('background-color', '#022648');
-    $('.logo-stroke').css('stroke', '#F5907C');
+    $("body").css("background-color", "#ff3930");
+    $(".logo-stroke").css("stroke", "#ffdac4");
     var tl2 = new TimelineMax({});
-    tl2.to('.center_logo', 0.6, {
-      css: {
-        width: '8vh'
-      },
-      ease: Power4.easeOut
-    }).to('.center', 0.6, {
-      css: {
-        top: '8vh'
-      },
-      ease: Elastic.easeInOut.config(1, 0.75)
-    }, "-=0.6").add(function () {
-      return $('.center_lower').show();
-    }).from('.typer-row', 0.6, {
-      y: 100,
-      opacity: 0,
-      ease: Power4.easeOut
-    }).staggerTo('.menu-link', 0.6, {
-      opacity: 1,
-      y: 0,
-      ease: Power4.easeOut
-    }, 0.2, '-=0.2').to('.about-text', 0.6, (_tl2$to$to$add$from$s = {
-      y: 100,
-      opacity: 1
-    }, _defineProperty(_tl2$to$to$add$from$s, "y", 0), _defineProperty(_tl2$to$to$add$from$s, "ease", Power4.easeOut), _tl2$to$to$add$from$s), '-=0.4').staggerTo('.icon', 0.6, {
-      y: 0,
-      opacity: 1,
-      ease: Power4.easeOut
-    }, 0.2, '-=0.4').to('.expander', 1, {
-      scale: 1,
-      ease: Elastic.easeOut
-    }, '-=0.4');
+    tl2
+      .to(".center_logo", 0.6, {
+        css: {
+          width: "8vh"
+        },
+        ease: Power4.easeOut
+      })
+      .to(
+        ".center",
+        0.6,
+        {
+          css: {
+            top: "8vh"
+          },
+          ease: Elastic.easeInOut.config(1, 0.75)
+        },
+        "-=0.6"
+      )
+      .add(function() {
+        return $(".center_lower").show();
+      })
+      .from(".typer-row", 0.6, {
+        y: 100,
+        opacity: 0,
+        ease: Power4.easeOut
+      })
+      .staggerTo(
+        ".menu-link",
+        0.6,
+        {
+          opacity: 1,
+          y: 0,
+          ease: Power4.easeOut
+        },
+        0.2,
+        "-=0.2"
+      )
+      .to(
+        ".about-text",
+        0.6,
+        ((_tl2$to$to$add$from$s = {
+          y: 100,
+          opacity: 1
+        }),
+        _defineProperty(_tl2$to$to$add$from$s, "y", 0),
+        _defineProperty(_tl2$to$to$add$from$s, "ease", Power4.easeOut),
+        _tl2$to$to$add$from$s),
+        "-=0.4"
+      )
+      .staggerTo(
+        ".icon",
+        0.6,
+        {
+          y: 0,
+          opacity: 1,
+          ease: Power4.easeOut
+        },
+        0.2,
+        "-=0.4"
+      )
+      .to(
+        ".expander",
+        1,
+        {
+          scale: 1,
+          ease: Elastic.easeOut
+        },
+        "-=0.4"
+      );
     var options = {
-      strings: ["Hi, I'm Matthew.", "I'm a web designer/developer.", "Learn more about me below,", "or message me using the <i>plus</i> button."],
+      strings: [
+        "Hi, I'm Matthew.",
+        "I'm a web designer/developer.",
+        "Learn more about me below,",
+        "or message me using the <i>plus</i> button."
+      ],
       startDelay: 2500,
       backDelay: 1000,
       backSpeed: 20,
       typeSpeed: 40,
       loop: true,
       loopCount: Infinity,
-      cursorChar: '|'
+      cursorChar: "|"
     };
     var typed = new Typed(".typer", options);
-    var activeLink = 'about';
-    $('.about').click(function () {
-      if (activeLink !== 'about') {
+    var activeLink = "about";
+    $(".about").click(function() {
+      if (activeLink !== "about") {
         var showAbout = function showAbout() {
-          $('.work-content').hide();
-          $('.about-content').show();
-          TweenMax.to('.about-content', 0.4, {
+          $(".work-content").hide();
+          $(".about-content").show();
+          TweenMax.to(".about-content", 0.4, {
             y: 0,
             opacity: 1,
             ease: Power4.easeOut
           });
         };
 
-        activeLink = 'about';
-        $('.about').addClass('link_active');
-        $('.work').removeClass('link_active');
-        TweenMax.to('.work-content', 0.4, {
+        activeLink = "about";
+        $(".about").addClass("link_active");
+        $(".work").removeClass("link_active");
+        TweenMax.to(".work-content", 0.4, {
           y: 50,
           opacity: 0,
           ease: Power4.easeOut,
@@ -122,22 +195,22 @@ $(function () {
         });
       }
     });
-    $('.work').click(function () {
-      if (activeLink !== 'work') {
+    $(".work").click(function() {
+      if (activeLink !== "work") {
         var showWork = function showWork() {
-          $('.about-content').hide();
-          $('.work-content').show();
-          TweenMax.to('.work-content', 0.4, {
+          $(".about-content").hide();
+          $(".work-content").show();
+          TweenMax.to(".work-content", 0.4, {
             y: 0,
             opacity: 1,
             ease: Power4.easeOut
           });
         };
 
-        activeLink = 'work';
-        $('.work').addClass('link_active');
-        $('.about').removeClass('link_active');
-        TweenMax.to('.about-content', 0.4, {
+        activeLink = "work";
+        $(".work").addClass("link_active");
+        $(".about").removeClass("link_active");
+        TweenMax.to(".about-content", 0.4, {
           y: 50,
           opacity: 0,
           ease: Power4.easeOut,
@@ -146,21 +219,22 @@ $(function () {
       }
     });
     var expanded = false;
-    var expander = document.querySelector('.expander');
-    var contact = document.querySelector('.contact-form');
-    var thankYou = document.querySelector('.thank-you');
-    var contactMe = document.querySelector('#contact-me');
+    var expander = document.querySelector(".expander");
+    var contact = document.querySelector(".contact-form");
+    var thankYou = document.querySelector(".thank-you");
+    var contactMe = document.querySelector("#contact-me");
 
     function postToGoogle() {
-      var name = $('#name').val();
-      var email = $('#email').val();
-      var msg = $('#msg').val();
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var msg = $("#msg").val();
       $.ajax({
-        url: "https://docs.google.com/forms/d/147C2SVFRoSkk55Q5qozQfjJEYLizB7oYzdaauLLldSI/formResponse",
+        url:
+          "https://docs.google.com/forms/d/147C2SVFRoSkk55Q5qozQfjJEYLizB7oYzdaauLLldSI/formResponse",
         data: {
-          'entry.1597425946': name,
-          'entry.24140995': email,
-          'entry.1715298080': msg
+          "entry.1597425946": name,
+          "entry.24140995": email,
+          "entry.1715298080": msg
         },
         type: "GET",
         dataType: "xml",
@@ -176,55 +250,61 @@ $(function () {
     }
 
     function showSuccess() {
-      TweenMax.set('.thank-you', {
+      TweenMax.set(".thank-you", {
         opacity: 0
       });
-      thankYou.style.display = 'inline-block';
-      TweenMax.to('.lds-facebook', 0.3, {
+      thankYou.style.display = "inline-block";
+      TweenMax.to(".lds-facebook", 0.3, {
         opacity: 0
       });
-      TweenMax.to('.thank-you', 0.3, {
+      TweenMax.to(".thank-you", 0.3, {
         opacity: 1
       });
     }
 
-    $('#contact-me').submit(function (e) {
+    $("#contact-me").submit(function(e) {
       e.preventDefault(); // TweenMax.to('#contact-me', 0.3, {opacity:0, onComplete:alert('hdf')});
 
-      contactMe.style.display = 'none';
-      TweenMax.to('.lds-facebook', 0.3, {
+      contactMe.style.display = "none";
+      TweenMax.to(".lds-facebook", 0.3, {
         opacity: 1
       });
       postToGoogle();
       return false;
     });
-    TweenMax.set('.btn-send', {
+    TweenMax.set(".btn-send", {
       opacity: 0
     });
-    TweenMax.set('.lds-facebook', {
+    TweenMax.set(".lds-facebook", {
       opacity: 0
     });
-    expander.addEventListener('click', function () {
+    expander.addEventListener("click", function() {
       if (!expanded) {
         expander.classList.add("expander__expanded");
-        contact.style.display = 'block';
-        TweenMax.staggerFromTo('.form-element', 0.6, {
-          y: 50,
-          opacity: 0
-        }, {
-          y: 0,
-          opacity: 1,
-          ease: Power4.easeOut
-        }, 0.1);
-        TweenMax.to('.btn-send', 0.1, {
+        contact.style.display = "block";
+        TweenMax.staggerFromTo(
+          ".form-element",
+          0.6,
+          {
+            y: 50,
+            opacity: 0
+          },
+          {
+            y: 0,
+            opacity: 1,
+            ease: Power4.easeOut
+          },
+          0.1
+        );
+        TweenMax.to(".btn-send", 0.1, {
           opacity: 1,
           ease: Power4.easeOut,
           delay: 0.4
         });
       } else {
         expander.classList.remove("expander__expanded");
-        contact.style.display = 'none';
-        TweenMax.set('.btn-send', {
+        contact.style.display = "none";
+        TweenMax.set(".btn-send", {
           opacity: 0
         });
       }
