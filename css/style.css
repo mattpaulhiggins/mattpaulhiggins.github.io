@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  background-color: #ef3d36;
+  background-color: #ffdac4;
   font-family: "Karla", sans-serif;
   overflow-x: hidden;
   color: #ffdac4;
@@ -293,7 +293,7 @@ h4 {
 }
 
 .btn-visit {
-  background-color: #ffdac4;
+  background-color: #ef3d36;
   border: none;
   border-radius: 100px;
   padding: 10px 20px;
@@ -306,7 +306,7 @@ h4 {
 }
 
 .btn-visit:hover {
-  background-color: #ef3d36;
+  background-color: #ffdac4;
   color: #30092a;
   cursor: pointer;
 }
@@ -465,6 +465,10 @@ h4 {
   }
 }
 
+.icon-item {
+  margin: 0px 10px;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .row {
@@ -494,7 +498,7 @@ h4 {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .work-content {
-    width: 50vw;
+    width: 70vw;
   }
 }
 
