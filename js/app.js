@@ -83,7 +83,7 @@ $(function() {
   function ending() {
     var _tl2$to$to$add$from$s;
 
-    $("body").css("background-color", "#ff3930");
+    $("body").css("background-color", "#30092a");
     $(".logo-stroke").css("stroke", "#ffdac4");
     var tl2 = new TimelineMax({});
     tl2

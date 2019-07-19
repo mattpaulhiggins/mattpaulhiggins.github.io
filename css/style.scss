@@ -1,10 +1,10 @@
 // @import url("https://fonts.googleapis.com/css?family=Poppins:400,800");
 @import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
 
-$peach: #ffdac4;
-$blue: #ff3930;
-$lightblue: #ffdac4;
 $tan: #ffdac4;
+$blue: #30092a;
+$lightblue: #ffdac4;
+$peach: #ef3d36;
 $white: #ffffff;
 
 // * {
@@ -25,12 +25,16 @@ body {
   transition: all 300ms ease;
 }
 
+.item-img > img {
+  width: 30vw;
+}
+
 .border_ring {
   position: absolute;
   z-index: -1;
   width: 100vw;
   height: 100vh;
-  border: 12px solid $peach;
+  border-top: 12px solid $tan;
 }
 
 .center_logo {
@@ -138,8 +142,25 @@ h4 {
   margin: 60px 0px;
 }
 
-.work-item-row {
-  margin: 14px 0px;
+.work-content {
+  width: 80vw;
+}
+
+.work-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-item-content {
+  margin: 40px 0px;
+}
+
+.work-item-img {
+  // width: 30vw;
+
+  & > img {
+    width: 100%;
+  }
 }
 
 .project_title {
@@ -327,8 +348,9 @@ h4 {
 .icon {
   height: 40px;
   width: 40px;
-  stroke: none;
-  fill: $peach;
+  color: $peach;
+  // stroke: none;
+  // fill: $peach;
   background: none;
   border: none;
   cursor: pointer;
@@ -436,16 +458,28 @@ h4 {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .work-content {
+    width: 80vw;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .work-content {
+    width: 50vw;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .work-content {
+    width: 40vw;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .work-content {
+    width: 30vw;
+  }
 }

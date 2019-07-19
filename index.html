@@ -1,235 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Matthew Higgins</title>
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-    <link rel="manifest" href="assets/manifest.json">
-    <meta name="msapplication-TileColor" content="#022648">
-    <meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
-    <meta name="theme-color" content="#022648">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-
-<body>
-    <div class="border_ring"></div>
-    <div class="contact-form">
-        <div class="lds-facebook">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Matthew Higgins</title>
+      <link rel="apple-touch-icon" sizes="57x57" href="assets/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="assets/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="assets/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="assets/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="assets/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="assets/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="assets/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="assets/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192" href="assets/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+      <link rel="manifest" href="assets/manifest.json">
+      <meta name="msapplication-TileColor" content="#022648">
+      <meta name="msapplication-TileImage" content="assets/ms-icon-144x144.png">
+      <meta name="theme-color" content="#022648">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+         crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+   </head>
+   <body>
+      <div class="border_ring"></div>
+      <div class="contact-form">
+         <div class="lds-facebook">
             <div></div>
             <div></div>
             <div></div>
-        </div>
-        <div class="thank-you">Message Sent, Thank you!</div>
-        <form id="contact-me" target="_self" action="">
+         </div>
+         <div class="thank-you">Message Sent, Thank you!</div>
+         <form id="contact-me" target="_self" action="">
             <div class="form-group form-element">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" name="name" class="form-control
-                        text-input" id="name"
-                    required>
-            </div>
-
-            <div class="form-group form-element">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" name="_replyTo" class="form-control
-                        text-input" id="email"
-                    aria-describedby="emailHelp" required>
+               <label for="name" class="form-label">Name</label>
+               <input type="text" name="name" class="form-control
+                  text-input" id="name"
+                  required>
             </div>
             <div class="form-group form-element">
-                <label for="msg" class="form-label">Message</label>
-                <textarea class="form-control text-input" id="msg"></textarea>
+               <label for="email" class="form-label">Email</label>
+               <input type="email" name="_replyTo" class="form-control
+                  text-input" id="email"
+                  aria-describedby="emailHelp" required>
             </div>
-
+            <div class="form-group form-element">
+               <label for="msg" class="form-label">Message</label>
+               <textarea class="form-control text-input" id="msg"></textarea>
+            </div>
             <input type="submit" value="Send" class="btn-send">
-
-
-        </form>
-
-    </div>
-    <div class="expander">
-        <div class="expander-front"><span class="plus">+</span></div>
-    </div>
-    <div class="expander-back"></div>
-    <div class="center">
-        <div class="center_logo">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 189 288.9" style="enable-background:new 0 0 189
-                    288.9;" xml:space="preserve">
-                <g id="Layer_2">
-                    <path class="logo-m logo-stroke" d="M64.5,154.5c0,0,0,30-30,30s-30-30-30-30v-60c0,0,0-60,60-60s60,60,60,60v60c0,0,0,30.1-30,30
-                            S64.5,154.5,64.5,154.5v-60c0,0-0.1-60,60-60s60,60,60,60v60c0,0,0,31.2-30,30s-30-30-30-30"></path>
-                </g>
-                <g id="Layer_3">
-                    <path class="logo-p logo-stroke" d="M184.5,94.5c0,0,2.8,60.3-60,60"></path>
-                </g>
-                <g id="Layer_5">
-                    <path class="logo-h logo-stroke" d="M64.5,94.5v-60c0,0,0-30,30-30s30,30,30,30"></path>
-                </g>
-                <g id="Layer_4">
-                    <path class="logo-base logo-stroke" d="M94.5,207.4l-30,56.6c0,0,10.1,19.9,30,19.9s30-19.9,30-19.9L94.5,207.4z"></path>
-                </g>
-            </svg>
-        </div>
-        <div class="container center_lower">
-            <div class="row justify-content-center typer-row">
-                <span class="typer"></span>
+         </form>
+      </div>
+      <div class="expander">
+         <div class="expander-front"><span class="plus">+</span></div>
+      </div>
+      <div class="expander-back"></div>
+      <div class="center">
+      <div class="center_logo">
+         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 189 288.9" style="enable-background:new 0 0 189
+            288.9;" xml:space="preserve">
+            <g id="Layer_2">
+               <path class="logo-m logo-stroke" d="M64.5,154.5c0,0,0,30-30,30s-30-30-30-30v-60c0,0,0-60,60-60s60,60,60,60v60c0,0,0,30.1-30,30
+                  S64.5,154.5,64.5,154.5v-60c0,0-0.1-60,60-60s60,60,60,60v60c0,0,0,31.2-30,30s-30-30-30-30"></path>
+            </g>
+            <g id="Layer_3">
+               <path class="logo-p logo-stroke" d="M184.5,94.5c0,0,2.8,60.3-60,60"></path>
+            </g>
+            <g id="Layer_5">
+               <path class="logo-h logo-stroke" d="M64.5,94.5v-60c0,0,0-30,30-30s30,30,30,30"></path>
+            </g>
+            <g id="Layer_4">
+               <path class="logo-base logo-stroke" d="M94.5,207.4l-30,56.6c0,0,10.1,19.9,30,19.9s30-19.9,30-19.9L94.5,207.4z"></path>
+            </g>
+         </svg>
+      </div>
+      <div class="container center_lower">
+         <div class="row justify-content-center typer-row">
+            <span class="typer"></span>
+         </div>
+         <div class="row justify-content-center">
+            <div class="menu">
+               <a href="#" class="menu-link about link_active">About</a>
+               <a href="#" class="menu-link work">work</a>
             </div>
-            <div class="row justify-content-center">
-                <div class="menu">
-                    <a href="#" class="menu-link about link_active">About</a>
-                    <a href="#" class="menu-link work">work</a>
-                </div>
+         </div>
+         <div class="row justify-content-center content-container">
+            <div class="container about-content">
+               <div class="row justify-content-center about-text">
+                  <p>I'm a web designer and developer from Canada with a passion for creating effective and
+                     engaging experiences on the web.
+                  </p>
+               </div>
+               <div class="row justify-content-center">
+                  <div class="col-4 col-md-2 col-lg-1">
+                     <button onClick="window.open('https://codepen.io/mattpaulhiggins/');" class="icon"
+                        data-toggle="tooltip" data-placement="top" title="CodePen">
+                        <i class="fab fa-codepen fa-2x"></i>
+                     </button>
+                  </div>
+                  <div class="col-4 col-md-2 col-lg-1">
+                     <button onclick="location.href='/assets/cv_matthewhiggins.pdf';"class="icon" data-toggle="tooltip" data-placement="top" title="CV">
+                        <i class="far fa-file-alt fa-2x"></i>
+                     </button>
+                  </div>
+                  <div class="col-4 col-md-2 col-lg-1">
+                     <button onclick="location.href='mailto:mattpaulhiggins@gmail.com';" class="icon"
+                        data-toggle="tooltip" data-placement="top" title="Email">
+                        <i class="far fa-envelope fa-2x"></i>
+                     </button>
+                  </div>
+                  <div class="col-4 col-md-2 col-lg-1">
+                        <button onclick="location.href='mailto:mattpaulhiggins@gmail.com';" class="icon"
+                           data-toggle="tooltip" data-placement="top" title="Design Portfolio">
+                           <i class="fas fa-draw-polygon  fa-2x"></i>
+                        </button>
+                     </div>
+               </div>
             </div>
-
-            <div class="row justify-content-center content-container">
-                <div class="container about-content">
-                    <div class="row justify-content-center about-text">
-                        <p>I'm a web designer and developer from Canada with a passion for creating effective and
-                            engaging experiences on the web.</p>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-3 col-md-2 col-lg-1">
-                            <button onClick="window.open('https://codepen.io/mattpaulhiggins/');" class="icon"
-                                data-toggle="tooltip" data-placement="top" title="CodePen">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    x="0px" y="0px" width="31.665px" height="31.665px" viewBox="0 0 31.665 31.665"
-                                    style="enable-background:new 0 0 31.665
-                                        31.665;"
-                                    xml:space="preserve">
-                                    <g>
-                                        <path d="M16.878,0.415c-0.854-0.565-1.968-0.552-2.809,0.034L1.485,9.214c-0.671,0.468-1.071,1.233-1.071,2.052v9.444
-                                                c0,0.84,0.421,1.623,1.122,2.086l12.79,8.455c0.836,0.553,1.922,0.553,2.758,0l13.044-8.618c0.7-0.463,1.122-1.246,1.122-2.086
-                                                v-9.279c0-0.839-0.421-1.622-1.121-2.085L16.878,0.415z
-                                                M26.621,10.645l-4.821,3.237l-4.521-3.288L17.25,4.127L26.621,10.645z
-                                                M13.979,4.133v6.329l-4.633,3.24l-4.621-3.099L13.979,4.133z
-                                                M3.458,13.722l2.991,2.004l-2.991,2.093V13.722z
-                                                M14.058,27.215
-                                                l-9.331-6.258l4.661-3.258l4.67,3.133V27.215z
-                                                M12.286,15.674l3.021-2.113l3.519,2.313l-3.119,2.095L12.286,15.674z
-                                                M17.354,27.215
-                                                V20.83l4.463-2.991l4.805,3.159L17.354,27.215z
-                                                M27.954,17.927l-3.168-2.082l3.168-2.125V17.927z"></path>
-                                    </g>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="col-3 col-md-2 col-lg-1">
-                                <button onclick="location.href='/assets/cv_matthewhiggins.pdf';"class="icon" data-toggle="tooltip" data-placement="top" title="CV">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512
-                                        512;"
-                                xml:space="preserve">
-                                <path d="M451.457,138.456L317.892,4.891C314.721,1.719,310.427,0,306.087,0H72.348c-9.22,0-16.696,7.475-16.696,16.696v478.609
-                                            c0,9.22,7.475,16.696,16.696,16.696h367.304c9.22,0,16.696-7.475,16.696-16.696V150.261
-                                            C456.348,145.989,454.644,141.641,451.457,138.456z
-                                            M322.783,57.002c8.112,8.112,68.448,68.448,76.563,76.563h-76.563V57.002z
-                                            M422.957,478.609H89.043V33.391h200.348v116.87c0,9.22,7.475,16.696,16.696,16.696h116.87V478.609z" />
-                                </path>
-                                <path d="M372.87,244.87H205.913c-9.22,0-16.696,7.475-16.696,16.696c0,9.22,7.475,16.696,16.696,16.696H372.87
-                                            c9.22,0,16.696-7.475,16.696-16.696C389.565,252.345,382.09,244.87,372.87,244.87z" />
-                                </path>
-
-                                <path d="M372.87,311.652H205.913c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696H372.87
-                                            c9.22,0,16.696-7.475,16.696-16.696S382.09,311.652,372.87,311.652z" />
-                                </path>
-
-                                <path d="M372.87,378.435H205.913c-9.22,0-16.696,7.475-16.696,16.696s7.475,16.696,16.696,16.696H372.87
-                                            c9.22,0,16.696-7.475,16.696-16.696S382.09,378.435,372.87,378.435z" />
-                                </path>
-
-                                <circle cx="139.13" cy="261.565" r="16.696" />
-                                </circle>
-
-                                <circle cx="139.13" cy="328.348" r="16.696" />
-                                </circle>
-
-                                <circle cx="139.13" cy="395.13" r="16.696" />
-                                </circle>
-                            </svg>
-                            </button>
-                        </div>
-                        <div class="col-3 col-md-2 col-lg-1">
-                            <button onclick="location.href='mailto:mattpaulhiggins@gmail.com';" class="icon"
-                                data-toggle="tooltip" data-placement="top" title="Email">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    x="0px" y="0px" viewBox="0 0 382.117 382.117" style="enable-background:new 0 0 382.117
-                                        382.117;"
-                                    xml:space="preserve">
-                                    <path d="M336.764,45.945H45.354C20.346,45.945,0,65.484,0,89.5v203.117c0,24.016,20.346,43.555,45.354,43.555h291.41
-                                            c25.008,0,45.353-19.539,45.353-43.555V89.5C382.117,65.484,361.772,45.945,336.764,45.945z
-                                            M336.764,297.72H45.354
-                                            c-3.676,0-6.9-2.384-6.9-5.103V116.359l131.797,111.27c2.702,2.282,6.138,3.538,9.676,3.538l22.259,0.001
-                                            c3.536,0,6.974-1.257,9.677-3.539l131.803-111.274v176.264C343.664,295.336,340.439,297.72,336.764,297.72z
-                                            M191.059,192.987
-                                            L62.87,84.397h256.378L191.059,192.987z" />
-                                    </path>
-                                </svg>
-
-                            </button>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="container work-content">
-                    <div class="container work-item">
-                        <div class="row work-item-row
-                                justify-content-center">
-                            <h2>Boutique J'Adore</h2>
-                        </div>
-                        <div class="row work-item-row
-                                justify-content-center">
-                            <h4>Design, Development</h4>
-                        </div>
-                        <div class="row work-item-row
-                                justify-content-center work-item-text">
-                            <p>I designed and developed a web site for Boutique J'Adore bridal shop that is fully
-                                responsive, matches the business's branding, and is quick to load on slower
-                                connections.</p>
-                        </div>
-                        <div class="row work-item-row
-                                justify-content-center">
-                            <button onClick="window.open('https://boutiquejadore.com');" class="btn-visit">Visit
-                                Site</button>
-                        </div>
-                    </div>
-
-                    <div class="row work-item-row justify-content-center">
-                        <div class="col-12">
-                            <p>. . .</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="work-content">
+               <div class="work-item">
+                  <div class="work-item-img">
+                     <img src="/assets/boutiquejadore_mockup.png">
+                  </div>
+                  <div class="work-item-content">
+                     <div class="work-item-row
+                        ">
+                        <h2>Boutique J'Adore</h2>
+                     </div>
+                     <div class="work-item-row
+                        ">
+                        <h4>Design, Development</h4>
+                     </div>
+                     <div class="work-item-row
+                        ">
+                        <p>I designed and developed a web site for Boutique J'Adore bridal shop that is fully
+                           responsive, matches the business's branding, and is quick to load on slower
+                           connections.
+                        </p>
+                     </div>
+                     <div class="work-item-row
+                        ">
+                        <button onClick="window.open('https://boutiquejadore.com');" class="btn-visit">Visit
+                        Site</button>
+                     </div>
+                  </div>
+               </div>
+               <br><br>
+               <div class="work-item">
+                  <div class="work-item-img">
+                     <img src="/assets/codepen_collection.png">
+                  </div>
+                  <div class="work-item-content">
+                     <div class="work-item-row
+                        ">
+                        <h2>Design Implementations</h2>
+                     </div>
+                     <div class="work-item-row
+                        ">
+                        <h4>Development</h4>
+                     </div>
+                     <div class="work-item-row
+                        ">
+                        <p>A collection of website/landing pages/mobile app screens implemented in HTML, CSS/SCSS and JavaScript from various designs.
+                        </p>
+                     </div>
+                     <div class="work-item-row
+                        ">
+                        <button onClick="window.open('https://codepen.io/collection/XbzZMY/');" class="btn-visit">Visit
+                        Site</button>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-        <script src="js/DrawSVGPlugin.min.js"></script>
-        <script src="js/app.js"></script>
-</body>
-
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+         crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+         crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+      <script src="js/DrawSVGPlugin.min.js"></script>
+      <script src="js/app.js"></script>
+   </body>
 </html>
